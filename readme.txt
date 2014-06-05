@@ -47,7 +47,7 @@ This plugin fully implements all single site and multi site WordPress emails.
 Good news! This plugin creates a default template that looks just like the original WordPress emails *and* let's you run it through sendwithus.
 
 == Screenshots ==
-I'll put screenshots here when the plugin goes through
+1. The Dashboard
 
 == Changelog ==
 
