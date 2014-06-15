@@ -68,17 +68,17 @@ function sendwithus_conf_main() {
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
     <div id="header">
-        <h1 style="float: left; margin-top: 10px; margin-bottom: 0px;">
+        <h1 style="float: left; margin-top: 10px; margin-bottom: 0;">
             <a href="http://www.sendwithus.com" target="_blank">
                 <span style="color: #777">send<span style="color: #f7931d">with</span>us</span>
             </a>
         </h1>
-        <p style="float: right; margin-right: 20px; margin-bottom: 0px;">Enable transactional emails within WordPress with ease.</p>
+        <p style="float: right; margin-right: 20px; margin-bottom: 0;">Enable transactional emails within WordPress with ease.</p>
     </div>
     <?php
     display_getting_started_message();
     ?>
-    <div style="margin-top: 0px; text-align: center;">
+    <div style="margin-top: 0; text-align: center;">
         <form action="http://www.sendwithus.com/login" target="_blank" class="site_button">
             <button id="dashboard_button" class="button">Dashboard</button>
         </form>
@@ -105,9 +105,9 @@ function sendwithus_conf_main() {
 	    <?php if ( is_network_admin() ) : ?>
 	    <form action="edit.php?action=reg_settings" method="post">
 
-	    <? else : ?>
+	    <?php else : ?>
         <form action="options.php" method="post">
-	    <? endif ?>
+	    <?php endif ?>
             <?php
             // Load up the previously saved settings.
             settings_fields( 'sendwithus_settings' );
@@ -137,7 +137,7 @@ function sendwithus_conf_main() {
                                 <input id="api_box" type="text" name="api_key"
                                        placeholder="Your sendwithus API key."
                                        value="<?php echo get_api_key(); ?>"/>
-                                <?php submit_button() ?>
+                                <?php submit_button(); ?>
                             </div>
 
                             <div id="api_button" class="button">Show API Key</div>
@@ -152,7 +152,7 @@ function sendwithus_conf_main() {
                 <table class="wp-list-table widefat sendwithus_table">
                     <?php generate_template_table( $GLOBALS['wp_notifications'] ); ?>
                 </table>
-	            <?php endif ?>
+	            <?php endif; ?>
                 <!-- Events that are displayed when multisite events are enabled -->
                 <?php if ( is_network_admin() ) : ?>
                     <table class="multisite wp-list-table widefat" id="multisite_table">
@@ -188,7 +188,7 @@ function sendwithus_conf_main() {
                 </table>
             <?php endif; ?>
             <div class="display_button_area">
-                <?php submit_button() ?>
+                <?php submit_button(); ?>
             </div>
         </form>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -209,10 +209,8 @@ function sendwithus_conf_main() {
             $('.test_email_button').click(function(){
                 var className = this.classList[2];
                 var data = { action : 'test_email',
-                          email : className}
-                $.post(ajaxurl, data, function(response){
-                    alert(response);
-                });
+                          email : className};
+                $.post(ajaxurl, data);
             });
 
             // Used to hide/display API entry/viewing area in main screen.
