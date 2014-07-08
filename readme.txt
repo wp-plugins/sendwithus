@@ -1,5 +1,5 @@
 === sendwithus ===
-Contributors: yokelpole, freshcelery, dylanemoore
+Contributors: yokelpole, freshcelery, dylanemoore, wbrosz, gschier, bvanvugt
 Tags: email, transactional, sendwithus, sendgrid, mandrill, mailgun, message bus, postmark, multisite, network, wpmu
 Requires at least: 3.9.0
 Tested up to: 3.9.1
