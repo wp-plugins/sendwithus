@@ -51,6 +51,9 @@ Good news! This plugin creates a default template that looks just like the origi
 
 == Changelog ==
 
+=1.02=
+* Now with less spamming of sendwithus’ servers!
+
 = 1.01 =
 * Some bugfixes
 * Multisite configuration is now saner

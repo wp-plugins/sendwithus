@@ -18,12 +18,11 @@ function get_templates() {
 
 function set_globals(){
     $GLOBALS['templates'] = get_templates();
-    $GLOBALS['api_key'] = get_api_key();
 }
 
 // Function for creating a default template if there isn't one already (Single Site Instance)
 function create_default_template(){
-    $active_templates = get_templates();
+    $active_templates = $GLOBALS['templates'];
 
     $api_key = get_option('api_key');
     $api = new \sendwithus\API($api_key);
@@ -59,7 +58,7 @@ function create_default_template(){
 }
 // Function for creating a default template if there isn't one already (Multi Site Instance)
 function ms_create_default_template(){
-    $active_templates = get_templates();
+    $active_templates = $GLOBALS['templates'];
 
     $api_key = get_site_option('api_key');
     $api = new \sendwithus\API($api_key);
