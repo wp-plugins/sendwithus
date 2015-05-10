@@ -51,6 +51,9 @@ Good news! This plugin creates a default template that looks just like the origi
 
 == Changelog ==
 
+= 1.03 =
+* updated PHP client, yay!
+
 = 1.02 =
 * Now with less spamming of sendwithus’ servers!
 
