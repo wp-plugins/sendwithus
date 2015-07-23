@@ -2,7 +2,7 @@
 Contributors: yokelpole, freshcelery, dylanemoore, wbrosz, gschier, bvanvugt, troymcginnis
 Tags: email, transactional, sendwithus, sendgrid, mandrill, mailgun, message bus, postmark, multisite, network, wpmu
 Requires at least: 3.9.0
-Tested up to: 3.9.1
+Tested up to: 4.2.2
 Stable tag: 4.3
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -50,6 +50,10 @@ Good news! This plugin creates a default template that looks just like the origi
 1. The Dashboard
 
 == Changelog ==
+
+= 1.1.0 =
+* Updated client to work with WordPress 4.0+
+* Switched semantic versioning
 
 = 1.03 =
 * updated PHP client, yay!
